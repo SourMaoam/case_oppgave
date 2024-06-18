@@ -1,0 +1,30 @@
+.room-history {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.room-info {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.history-item p {
+  margin: 5px 0;
+}

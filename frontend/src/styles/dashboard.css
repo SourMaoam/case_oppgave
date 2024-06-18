@@ -1,0 +1,58 @@
+.container {
+  padding: 20px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.filter-container,
+.search-container {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  margin-right: 10px;
+}
+
+.filter-input,
+.filter-select,
+.search-input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.filter-button,
+.search-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover,
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.room-item {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.room-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
