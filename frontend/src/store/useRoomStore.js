@@ -131,7 +131,7 @@ const useRoomStore = create(
     bookRoom: async ({ roomNumber, startDate, endDate }) => {
       try {
         const token = localStorage.getItem("token");
-        const user = useUserStore.getState().user; // Get the current user
+        const user = useUserStore.getState().user;
         if (!user) {
           throw new Error("User not logged in");
         }

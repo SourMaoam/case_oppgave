@@ -6,7 +6,7 @@ This is a hotel booking system built with Node.js, React, and MongoDB.
 
 Before you begin, ensure you have the following installed on your machine:
 
-- Node.js (v14 or higher)
+- Node.js (v20 or higher)
 - npm (v6 or higher)
 - MongoDB (v4.4 or higher)
 
@@ -16,8 +16,8 @@ Follow these steps to set up and run the project:
 
 ### 1. Clone the Repository
 
-bash
-git clone https://github.com/SourMaoam/24SevenHotels/tree/master
+bash:
+git clone https://github.com/SourMaoam/24SevenHotels/tree/main
 cd 24SevenHotels
 
 

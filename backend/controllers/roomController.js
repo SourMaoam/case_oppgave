@@ -116,7 +116,7 @@ exports.getRoomHistory = async (req, res) => {
 
 exports.cancelBooking = async (req, res) => {
   const { roomId, bookingId } = req.params;
-  const userId = req.user._id; // Get user id from request user object
+  const userId = req.user._id;
   try {
     const room = await Room.findById(roomId);
     const booking = room.bookings.id(bookingId);

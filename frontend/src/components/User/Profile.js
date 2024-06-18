@@ -22,7 +22,7 @@ function Profile() {
       <p>
         <strong>Role:</strong> {user.role}
       </p>
-      {/* Add more user information here if needed */}
+      <strong>Email:</strong> {user.email}
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Shared/Header";
-import Footer from "./components/Shared/Footer";
 import LoginForm from "./components/User/LoginForm";
 import RegisterForm from "./components/User/RegisterForm";
 import Profile from "./components/User/Profile";
@@ -29,7 +28,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }

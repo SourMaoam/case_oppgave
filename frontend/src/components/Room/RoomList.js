@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useRoomStore from '../../store/useRoomStore'; // Ensure correct path
+import useRoomStore from '../../store/useRoomStore';
 
 function RoomList() {
   const rooms = useRoomStore((state) => state.rooms);

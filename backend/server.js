@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-dotenv.config(); // Load environment variables from .env file
+dotenv.config();
 
 // Database connection
 mongoose
@@ -15,7 +15,7 @@ const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // Instead of bodyParser.json()
+app.use(express.json());
 
 // Importing routes
 const userRoutes = require("./routes/userRoutes");
@@ -35,4 +35,4 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-module.exports = app; // For potential testing purposes
+module.exports = app;
