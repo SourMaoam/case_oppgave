@@ -6,12 +6,14 @@ function RegisterForm() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
   const registerUser = useUserStore((state) => state.registerUser);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const success = await registerUser({ username, email, password });
+    const role = isAdmin ? "admin" : "customer";
+    const success = await registerUser({ username, email, password, role });
     if (success) {
       navigate("/dashboard");
     } else {
@@ -48,6 +50,16 @@ function RegisterForm() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={isAdmin}
+            onChange={(e) => setIsAdmin(e.target.checked)}
+          />
+          Register as Admin
+        </label>
       </div>
       <button type="submit">Register</button>
     </form>

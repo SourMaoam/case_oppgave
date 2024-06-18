@@ -18,11 +18,12 @@ exports.registerUser = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
+    const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({
       username,
       email,
-      password,
-      role,
+      password: hashedPassword,
+      role: role || "customer", // Default to 'customer' if role is not provided
     });
 
     res.status(201).json({
@@ -33,10 +34,12 @@ exports.registerUser = async (req, res) => {
       token: generateToken(user._id),
     });
   } catch (error) {
+    console.error("Error registering user:", error);
     res.status(500).json({ message: error.message });
   }
 };
 
+// Login user
 exports.loginUser = async (req, res) => {
   const { login, password } = req.body;
   let user;

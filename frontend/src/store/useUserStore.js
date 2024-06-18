@@ -1,5 +1,4 @@
 import create from "zustand";
-import { useNavigate } from "react-router-dom";
 
 const useUserStore = create((set) => ({
   user: JSON.parse(localStorage.getItem("user")) || null,
@@ -27,14 +26,14 @@ const useUserStore = create((set) => ({
     }
   },
 
-  registerUser: async ({ username, email, password }) => {
+  registerUser: async ({ username, email, password, role = "customer" }) => {
     try {
       const response = await fetch("http://localhost:5001/api/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, email, password, role }),
       });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
