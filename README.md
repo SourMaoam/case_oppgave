@@ -17,7 +17,7 @@ Follow these steps to set up and run the project:
 ### 1. Clone the Repository
 
 bash:
-git clone https://github.com/SourMaoam/24SevenHotels/tree/main
+git clone https://github.com/SourMaoam/case_oppgave/tree/main
 cd 24SevenHotels
 
 
