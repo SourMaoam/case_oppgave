@@ -18,14 +18,14 @@ Follow these steps to set up and run the project:
 
 bash
 git clone https://github.com/SourMaoam/24SevenHotels/tree/master
-cd hotel-booking-system
+cd 24SevenHotels
 
 
 ### 2. Set Up the Backend
 
 Navigate to the backend directory and install the dependencies:
 
-bash
+bash:
 cd backend
 npm install
 
@@ -38,7 +38,7 @@ JWT_SECRET=qeisn4Rg0+q9d07fTQy11T853YucabDS9kRCjgeXQU8=
 
 ### 3. Set Up the Frontend
 
-Navigate to the \`frontend\` directory and install the dependencies:
+Navigate to the frontend directory and install the dependencies:
 
 bash:
 cd ../frontend
